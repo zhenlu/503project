@@ -18,14 +18,12 @@ are based on this area and search engines are one of them. Many of us have built
 before using tools such as \emph{Apache Lucene}\footnote{For more details, see 
 http://lucene.apache.org}. 
 
-The technologies for search engines are well-developed by now. They all use classic algorithms and
-there are lots of tools such as \emph{Lucene} are built for creating search engines. So we can
-build a search engine easily using these frameworks.
+The technologies for search engines are well-developed by now and they all use classic algorithms.
+There are lots of tools providing frameworks to build search engines easily, such as \emph{Lucene}.
 
-However, these tools provide implemented parallel algorithms for building a search engine thus we are
-not very familiar with the parallelism inside search engines. So for this course project, we 
-decide to implement the main algorithms and parts for a search engine to understand the parallelism 
-of search engine better.
+However, we are not very familiar with the parallelism inside search engines, since parallel algorithms
+are packaged in these tools. So for this course project, we decide to implement the main algorithms 
+and parts for a search engine to understand the parallelism of search engines better.
 
 \section{Problem Description}
 For modern search engines, there are 4 main parts, including crawling web pages, indexing documents, 
@@ -43,8 +41,8 @@ At last, when a query is given, we can use the inverted index and calculated Pag
 to get the result matches the query best and then returns a ranked list to user as the final result.
 
 \section{Proposed Work}
-Based on the main parts of search engines. This project can be divide into 4 parts as well. Details
-for each part will described below.
+Based on the main parts of search engines， this project can be divided into 4 parts as well. Details
+for each part will be described below.
 
 \begin{itemize}
 	\item {\bf Crawling:} implement a parallel web crawler for obtaining data from some seed URLs.
