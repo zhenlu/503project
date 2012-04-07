@@ -8,29 +8,27 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \title{Project Proposal}
-\author{Wenjing Yu, Peng Wan, Lingyu Deng, Zhen Lu}
+\author{Wenjing Yu, Lingyu Deng, Peng Wan, Zhen Lu}
 
 \begin{document}
 \maketitle
 \section{Background}
-Modern information retrieval becomes an important role in daily life. Many research topics
-are based on this area and search engines are one of them. Many of us have built search engines 
+Today, search engine plays an increasingly important role in our daily life. As graduate students, many of us have built search engines 
 before using tools such as \emph{Apache Lucene}\footnote{For more details, see 
 http://lucene.apache.org}. 
 
-The technologies for search engines are well-developed by now and they all use classic algorithms.
-There are lots of tools providing frameworks to build search engines easily, such as \emph{Lucene}.
+%The search engines technologies are well-developed by now and the most popular ones are classic algorithms.
+%There are lots of tools providing frameworks to build search engines easily, such as \emph{Lucene}.
 
 However, we are not very familiar with the parallelism inside search engines, since parallel algorithms
-are packaged in these tools. So for this course project, we decide to implement the main algorithms 
-and parts for a search engine to understand the parallelism of search engines better.
+are packaged in these tools. In this project we will focus on some of the most well-known algorithm in search engine and implement them in a parallel way to have a better understanding of search engines' parallelism.
 
 \section{Problem Description}
-For modern search engines, there are 4 main parts, including crawling web pages, indexing documents, 
+In modern search engines, there are 4 main parts, which include crawling web pages, indexing documents, 
 ranking and querying. 
 
-Web crawler handles obtaining data from the web. Giving some starting URLs, a crawler downloads the
-pages and parse the page to extract the URLs inside the page. 
+Web crawler obtains data from the web. Giving some starting URLs, a crawler downloads the
+pages and parse the page to extract the URLs inside the page. And go on to download and parse the new URLs it obtained just now.
 
 The most common method for indexing is to represent the documents using vector space model. This part
 mainly focuses on the representation and building an inverted index for documents.
